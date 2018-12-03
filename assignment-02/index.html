@@ -39,16 +39,20 @@
     <h1 class='w3-center'>We will rock you</h1>
     <p class='lyrics'>
         Buddy you're a boy make a big noise </br>
-Playin' in the street gonna be a big man some day</br>
-You got mud on yo' face</br>
-You big disgrace</br>
-Kickin' your can all over the place</br>
-Singin'
+        Playin' in the street gonna be a big man some day</br>
+        You got mud on yo' face</br>
+        You big disgrace</br>
+        Kickin' your can all over the place</br>
+        Singin'
     </p>
 </section>
     <script>
         let currentSlide=1;
-       showSlide(currentSlide);
+        setInterval(function(){
+                showSlide(currentSlide);
+                currentSlide +=1;
+        }
+        ,3000);
         function plusDivs(activeSlide){
              currentSlide += activeSlide;
              showSlide(currentSlide);
