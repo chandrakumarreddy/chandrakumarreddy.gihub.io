@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chandra</title>
+        <style>
+        html{
+            height:100%;
+            width:100%;
+            padding:0;
+            margin:0;
+        }
+        body{
+            background-image:url('images/background.png');
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+            padding-top:20px;
+        }
+        .logo{
+            flex-direction: row;
+            float: left;
+        }
+        .logo img {
+            width:100px;
+            height:100px;
+        }
+        ul {
+            list-style: none;
+            flex-grow: 1;
+            float: right;
+            padding:10px 20px;
+        }
+        li{
+            display: inline-flex;
+            padding:10px;
+            font-size:25px;
+            color:#000;
+            letter-spacing: 1.2px;
+            font-style: italic;
+        }
+        li:hover{
+            color: orange;
+            border-bottom:3px solid#fff;
+        }
+        button{
+            padding:10px;
+            border-radius: 10px;
+            color: #000;
+            background: transparent;
+            border: 2px solid orange;
+            font-size: 25px;
+        }
+        button:hover{
+            color: #fff;
+            background-color: rgb(0,0,0,0.1);
+            border: 2px solid #000;
+        }
+        #content{
+            padding:160px 100px 0 160px;
+            clear:both;
+        }
+        #content h1,h2{
+            font-size:40px;
+        }
+        .login {
+            margin-right: 20px;
+        }
+        @media only screen and (max-width: 772px){
+                #content h1,h2{
+                    font-size:100px;
+                }
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class='logo'><img src='images/logo.png'/></div>
+            <div>
+                <ul>
+                    <li>Introduction</li>
+                    <li>learn</li>
+                    <li>Practice</li>
+                    <li>Evaluate</li>
+                    <li>Have some fun</li>
+                </ul>
+                </div>
+        </header>
+        <section id='content'>
+            <h1>Hello HTML5</h1>
+        <h2>It is device friendly</h2>
+            <div>
+                <button class='login'>Login</button>
+                <button>Register (Free)</button>
+            </div>
+        </section>
+    </body>    
+</html>
