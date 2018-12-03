@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slide show</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.sliderHeader{
+        background: blanchedalmond;
+        margin:0;
+}
+    .mySlides{
+        display:none
+    }
+    .sliderImages{
+        position: relative;
+    }
+    .song{
+        padding:20px;
+    }
+    .lyrics{
+            padding: 0 20px;
+    font-size: 1.2em;
+    }
+</style>
+</head>
+<body>
+    <h1 class='w3-center sliderHeader'>Manual slider</h1>
+    <div class="w3-content w3-dispaly-container sliderImages">
+        <img class="mySlides" src="images/img_snowtops.jpg" style="width:100%">
+  <img class="mySlides" src="images/img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="images/img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="images/img_forest.jpg" style="width:100%">
+   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+<section class='song'>
+    <h1 class='w3-center'>We will rock you</h1>
+    <p class='lyrics'>
+        Buddy you're a boy make a big noise </br>
+Playin' in the street gonna be a big man some day</br>
+You got mud on yo' face</br>
+You big disgrace</br>
+Kickin' your can all over the place</br>
+Singin'
+    </p>
+</section>
+    <script>
+        let currentSlide=1;
+       showSlide(currentSlide);
+        function plusDivs(activeSlide){
+             currentSlide += activeSlide;
+             showSlide(currentSlide);
+        }
+        function showSlide(n){
+             var x=document.getElementsByClassName('mySlides');
+               if(n>x.length) currentSlide=1;
+            if(n<1) currentSlide=x.length; 
+            for(var i=0;i<x.length;i++){
+                x[i].style.display='none'
+            }
+            x[currentSlide-1].style.display='block'
+        }
+    </script>
+</body>
+</html>
